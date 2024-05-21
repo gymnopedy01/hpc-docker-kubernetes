@@ -107,4 +107,41 @@ ls -l car/run/docker.sock
 
 
 
+도커 컨테이너 실행되는 이미지 및 정보
+```
+kcia@k8s-21-1:~$ ls -ld /var/lib/docker
+drwx--x--- 12 root root 4096  5\uc6d4 21 14:15 /var/lib/docker
+kcia@k8s-21-1:~$ sudo -i
+[sudo] password for kcia: 
+root@k8s-21-1:~# cd  /var/lib/docker
+root@k8s-21-1:/var/lib/docker# ls -l
+total 44
+drwx--x--x 4 root root 4096  5\uc6d4 21 11:52 buildkit
+drwx--x--- 3 root root 4096  5\uc6d4 21 16:04 containers
+-rw------- 1 root root   36  5\uc6d4 21 11:51 engine-id
+drwx------ 3 root root 4096  5\uc6d4 21 11:51 image
+drwxr-x--- 3 root root 4096  5\uc6d4 21 11:51 network
+drwx--x--- 8 root root 4096  5\uc6d4 21 16:04 overlay2
+drwx------ 4 root root 4096  5\uc6d4 21 11:51 plugins
+drwx------ 2 root root 4096  5\uc6d4 21 14:15 runtimes
+drwx------ 2 root root 4096  5\uc6d4 21 11:52 swarm
+drwx------ 2 root root 4096  5\uc6d4 21 16:04 tmp
+drwx-----x 2 root root 4096  5\uc6d4 21 14:15 volumes
+root@k8s-21-1:/var/lib/docker# 
+```
 
+
+
+커널의 버전은.. 같다..
+```
+kcia@k8s-21-1:~$ uname -r
+6.5.0-35-generic
+kcia@k8s-21-1:~$ uname -a
+Linux k8s-21-1 6.5.0-35-generic #35~22.04.1-Ubuntu SMP PREEMPT_DYNAMIC Tue May  7 09:00:52 UTC 2 x86_64 x86_64 x86_64 GNU/Linux
+kcia@k8s-21-1:~$ docker run -it ubuntu:14.04 bash
+
+root@fa3ac662ca37:/# uname -r
+6.5.0-35-generic
+root@18573bc586b4:/# uname -a
+Linux 18573bc586b4 6.5.0-35-generic #35~22.04.1-Ubuntu SMP PREEMPT_DYNAMIC Tue May  7 09:00:52 UTC 2 x86_64 x86_64 x86_64 GNU/Linux
+```
