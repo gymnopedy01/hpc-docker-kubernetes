@@ -145,3 +145,8 @@ root@fa3ac662ca37:/# uname -r
 root@18573bc586b4:/# uname -a
 Linux 18573bc586b4 6.5.0-35-generic #35~22.04.1-Ubuntu SMP PREEMPT_DYNAMIC Tue May  7 09:00:52 UTC 2 x86_64 x86_64 x86_64 GNU/Linux
 ```
+
+https://containerd.io
+
+containerd는 oci 표준을 구현한 레퍼런스
+cri-o 는 쿠버네티스에서 사용하는 containerd 의 오버헤드를 줄인 플러그인
