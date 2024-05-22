@@ -150,3 +150,15 @@ https://containerd.io
 
 containerd는 oci 표준을 구현한 레퍼런스
 cri-o 는 쿠버네티스에서 사용하는 containerd 의 오버헤드를 줄인 플러그인
+
+
+Datacenter OS (DCOS)
+쿠버네티스를 DCOS로 만든건 아니지만,  숟가락 몇개 얹으면 쿠버네티스로도 할 수 있음
+
+Cattle Business vs Pet Business
+Stateless vs Stateful
+
+microservices
+
+
+
