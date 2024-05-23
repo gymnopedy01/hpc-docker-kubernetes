@@ -129,15 +129,15 @@ api server가 kubelet을 찾아가는ㄱ ㅕㅇ우는 문제가생겼ㅇㄹ경�
 
 ``` sh 
 sudo apt update 
-sudo apt install -y ovirt-guest-agent
+sudo apt install -y qemu-guest-agent
 
 ip a
-sudo hostnamectl set-hostname --static k8s-24-1
-sudo hostnamectl set-hostname --static k8s-24-2
+sudo hostnamectl set-hostname --static k8s-1-1
+sudo hostnamectl set-hostname --static k8s-1-2
 
 sudo vi /etc/hosts
-10.100.152.157 k8s-24-1
-10.100.152.158 k8s-24-2
+10.100.152.111 k8s-1-1
+10.100.152.112 k8s-1-2
 
 sudo vi /etc/fstab
 #/swapfile                                 none            swap    sw              0       0
