@@ -32,11 +32,39 @@ kubeadm init --pod-network-cidr 10.32.0.0/12
 
 alias k=kubectl
 k api-resources
+
+
+sudo ctr image ls
+sudo ctr image pull docker.io/weaveworks/weave-kube:latest
+sudo ctr image pull docker.io/weaveworks/weave-npc:latest
 ```
+
+kubectl get ds --all-namespaces
 
 
 https://github.com/weaveworks/weave/blob/master/site/kubernetes/kube-addon.md#-installation 
 
-
+kubecl delee pods weavene-sadf-
 
 source <(kubectl completion bash)
+
+
+
+```sh
+
+kubeadm init --pod-network-cidr 10.10.0.0/16
+
+```
+
+kubectl -f pod.yml
+ip route 
+
+kubectl por-forward hello-pod 5000:8000
+
+
+replicaset
+매치레이블값과 파의 레이블의 갑은 같아야한다.
+
+
+deployment
+버전1 버전2 이렇게 레플리카셋간의 롤아웃 롤백을 해준다.
