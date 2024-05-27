@@ -6,8 +6,7 @@
 데몬셋  
 모든 노드에 한개씩 떠야함
 
-라이브니스프로브를 따로 안주면
-pid 1 번으로 판단함
+라이브니스프로브를 설정 안하면 pid 1 번으로 팟 죽었는지 판단함
 
 kube-proxy 는 넷필터를 통해 cni 통신 실패난걸 K8S 서비스리소스에 있는지 확인해서 레코드를 확인해서 응답해줌
 
@@ -68,3 +67,6 @@ replicaset
 
 deployment
 버전1 버전2 이렇게 레플리카셋간의 롤아웃 롤백을 해준다.
+
+
+https://kubernetes.io/ko/docs/tasks/tools/included/optional-kubectl-configs-bash-linux/
